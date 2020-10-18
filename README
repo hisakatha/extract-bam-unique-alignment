@@ -1,0 +1,3 @@
+A program to extract unique alignments with a specified mapping quality in a bam file.
+Both primary and secondary alignments of a read will be removed,
+if they have higher mapping quality (MapQ) than a specified threshold.
