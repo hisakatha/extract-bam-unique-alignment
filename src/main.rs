@@ -40,7 +40,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut last_qname: String = "".to_string();
     let mut current_tid;
     let mut current_mapq: u8;
-    while bam.read(&mut record)? {
+    while let Some(result) = bam.read(&mut record) {
+        result.expect("Failed to parse a record");
         current_qname = std::str::from_utf8(record.qname())?.to_string();
         current_tid = record.tid();
         current_mapq = record.mapq();

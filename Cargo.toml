@@ -1,10 +1,10 @@
 [package]
 name = "extract_bam_unique_alignment"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["hisakatha <hisakatha@users.noreply.github.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rust-htslib = "*"
+rust-htslib = "^0.36.0"
